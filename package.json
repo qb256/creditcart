@@ -1,0 +1,56 @@
+{
+  "name": "my-medusa-backend",
+  "version": "0.0.1",
+  "description": "A starter for Medusa projects.",
+  "author": "Medusa (https://medusajs.com)",
+  "license": "MIT",
+  "keywords": [
+    "sqlite",
+    "postgres",
+    "typescript",
+    "ecommerce",
+    "headless",
+    "medusa"
+  ],
+  "scripts": {
+    "build": "medusa build",
+    "seed": "medusa exec ./src/scripts/seed.ts",
+    "start": "medusa start",
+    "dev": "medusa develop",
+    "test:integration:http": "TEST_TYPE=integration:http NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
+    "test:integration:modules": "TEST_TYPE=integration:modules NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
+    "test:unit": "TEST_TYPE=unit NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit"
+  },
+  "dependencies": {
+    "@medusajs/admin-sdk": "^2.11.0",
+    "@medusajs/cli": "^2.11.0",
+    "@medusajs/framework": "^2.11.0",
+    "@medusajs/js-sdk": "^2.11.0",
+    "@medusajs/medusa": "^2.11.0",
+    "@medusajs/utils": "^2.11.0",
+    "@octokit/rest": "^22.0.0",
+    "algoliasearch": "^5.41.0",
+    "next": "15.1.0",
+    "react-instantsearch": "^7.17.0"
+  },
+  "devDependencies": {
+    "@medusajs/test-utils": "^2.11.0",
+    "@swc/core": "^1.13.21",
+    "@swc/jest": "^0.2.39",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.9.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "jest": "^30.2.0",
+    "prop-types": "^15.8.1",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.12",
+    "yalc": "^1.0.0-pre.53"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
